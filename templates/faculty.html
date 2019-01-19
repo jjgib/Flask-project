@@ -1,0 +1,20 @@
+{% extends 'master.html' %}
+
+{% block mybody %}
+
+<h1>My Faculties</h1>
+{% for i in facultyList %}
+<div class="card mb-5">
+    <div class="card-header">
+      {{i.dept}}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{i.name}}</h5>
+      <p class="card-text">Mobile : {{i.mob}}</p>
+      <p class="card-text">Email : {{i.email}}</p>
+      <a href="#" class="btn btn-primary">Contact</a>
+    </div>
+  </div>
+{% endfor %}
+
+{% endblock %}
